@@ -1,0 +1,107 @@
+<%- include("partials/header.ejs") %>
+<h1>Enquiry Details</h1>
+<form action="http://localhost:9000/submit-enquiry" method="post">
+
+  <% const today = new Date();
+     const day = today.getDate();
+     const month = today.getMonth() + 1;
+     const year = today.getFullYear();
+     const formattedDate = `${day}/${month}/${year}`;
+  %>
+  <div class="label mb-3">
+    Today's Date - <%= formattedDate %>
+  </div>
+  <input name="fName" type="text" class="feedback-input" placeholder="Name" />
+  <input name="dob" type="date" class="feedback-input" placeholder="Date of Birth" />
+  <textarea name="address" class="feedback-input" placeholder="Address"></textarea>
+  <input name="email" type="text" class="feedback-input" placeholder="Email" />
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{5}[0-9]{5}" class="feedback-input" placeholder="1234567890">
+  <select name="occupation" class="feedback-input drop-down">
+    <option selected disabled>Choose Occupation</option>
+    <option value="Student">Student</option>
+    <option value="Business">Business</option>
+    <option value="Professional">Professional</option>
+    <option value="Household">Household</option>
+  </select>
+  <input name="guardian-name" type="text" class="feedback-input" placeholder="Guardian Name" />
+  <input name="guardian-occupation" type="text" class="feedback-input" placeholder="Guardian Occupation" />
+  <select name="education" class="feedback-input drop-down">
+    <option selected disabled>Choose Education Qualification</option>
+    <option value="post-graduate">Post Graduate</option>
+    <option value="graduate">Graduate</option>
+    <option value="under-graduate">Under Graduate</option>
+    <option value="engineer">Engineer</option>
+    <option value="under-graduate">Higher School Education</option>
+    <option value="under-graduate">Secondary School Education</option>
+  </select>
+  <div class="label">
+    <input name="still-studying" type="text" class="feedback-input" placeholder="Still Studying ?" />
+  </div>
+  <div class="label mb-3">
+    Career Options Interested In:
+  </div>
+  <div class="label mb-3">
+    <div class="container-box">
+      <div class="sub-container">
+        <input type="checkbox" name="marketing" id="marketing">
+        <label for="marketing">Marketing</label>
+      </div>
+
+      <div class="sub-container">
+        <input type="checkbox" name="consultancy" id="consultancy">
+        <label for="consultancy">Consultancy</label>
+      </div>
+    </div>
+    <div class="container-box">
+      <div class="sub-container">
+        <input type="checkbox" name="software-development" id="software-development">
+        <label for="software-development">Software Development</label>
+      </div>
+      
+      <div class="sub-container">
+        <input type="checkbox" name="computer-training" id="computer-training">
+        <label for="computer-training">Computer Training</label>
+      </div>
+    </div>
+
+    <div class="container-box ">
+      <div class="sub-container">
+        <input type="checkbox" name="finance" id="finance">
+        <label for="finance">Finance</label>
+      </div>
+
+      <div class="sub-container">
+        <input type="checkbox" name="not-aware" id="not-aware">
+        <label for="not-aware">Not aware of options</label>
+      </div>
+    </div>
+  </div>
+
+  <select name="duration" class="feedback-input drop-down">
+    <option selected disabled>Course Duration</option>
+    <option value="3-mon-<">Less than 3 months</option>
+    <option value="3-6-mon">3 to 6 Months</option>
+    <option value="6-12-mon">6 to 12 Months</option>
+    <option value="1-1.5-year">1 year to 1.5 year</option>
+    <option value="1.5-2-year">1.5 year to 2 years</option>
+    <option value=">-2-years">More than 2 years</option>
+  </select>
+
+  <select name="publicity" class="feedback-input drop-down">
+    <option selected disabled>How did you know about us?</option>
+    <option value="news">Newspaper / Magazine</option>
+    <option value="tv">T.V.</option>
+    <option value="banner">Banners / Hoarding</option>
+    <option value="relatives">Friends / Relatives</option>
+    <option value="social">Social Media</option>
+    <option value="others">Any Other</option>
+  </select>
+  <br>
+  <code>
+    FOR OFFICE USE
+  </code>
+  <br>
+  <%- include('./office_use.ejs') %>
+  <input type="submit" value="SUBMIT" />
+</form>
+<%- include("partials/footer.ejs") %>
