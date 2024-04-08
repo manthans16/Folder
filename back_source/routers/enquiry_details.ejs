@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Enquiry Details</h1>
+
+<% const enquiry = data || {}  %>  <ul>
+  <li>Name: <%= enquiry.name %></li>
+  <li>Date of Birth: <%= enquiry.dateOfBirth %></li>
+  <li>Address: <%= enquiry.address %></li>
+  <li>Contact Number: <%= enquiry.contactNo %></li>
+  <li>Email: <%= enquiry.email %></li>
+  <li>Occupation: <%= enquiry.occupation %></li>
+  <li>Guardian Name: <%= enquiry.guardianName %></li>
+  <li>Guardian Occupation: <%= enquiry.guardianOccupation %></li>
+  <li>Education: <%= enquiry.education %></li>
+  <li>Still Studying: <%= enquiry.stillStudying %></li>
+  <li>Career Options Interested In:</li>
+    <ul>
+      <% enquiry.careerOptions.forEach(option => { %>
+        <li><%= option %></li>
+      <% }) %>
+    </ul>
+  <li>Course Duration: <%= enquiry.courseDuration %></li>
+  <li>How did you know about us?: <%= enquiry.publicity %></li>
+</ul>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,34 @@
+{
+  "name": "crud-with-nodejs-and-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manthans16/CRUD-with-NodeJs-and-Express.git"
+  },
+  "keywords": [
+    "CRUD",
+    "NodeJs",
+    "MongoDB",
+    "Express",
+    "REST",
+    "API"
+  ],
+  "author": "Manthan Sharma (manthsns16)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manthans16/CRUD-with-NodeJs-and-Express/issues"
+  },
+  "homepage": "https://github.com/manthans16/CRUD-with-NodeJs-and-Express#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0",
+    "mongoos": "^0.0.1-security",
+    "mongoose": "^8.3.0",
+    "nodemon": "^3.1.0"
+  }
+}
